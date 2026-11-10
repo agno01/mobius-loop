@@ -85,5 +85,6 @@ export async function installedArtifact() {
     revision += 1;
     return output;
   }
-  return { root, packageRoot, project, tarball, moduleFile, moduleUrl, call, invoke, record };
+  return { root, packageRoot, project, tarball, moduleFile, moduleUrl, call, invoke, record,
+    validate: () => command([process.execPath, fileURLToPath(new URL("../script/validate.ts", import.meta.url)), packageRoot]) };
 }

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { readFile, readdir, stat } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { dirname, resolve, sep } from "node:path";
 
 const root = resolve(process.argv[2] ?? ".");
 const manifest: unknown = JSON.parse(await readFile(resolve(root, "package.json"), "utf8"));
@@ -34,7 +34,7 @@ async function links(file: string): Promise<void> {
     assert(href);
     if (/^(?:https?:|#)/.test(href)) continue;
     const destination = resolve(dirname(file), href.split("#")[0] ?? "");
-    assert(destination.startsWith(`${root}/`), `Reference escapes package: ${href}`);
+    assert(destination.startsWith(`${root}${sep}`), `Reference escapes package: ${href}`);
     assert((await stat(destination)).isFile(), `Missing reference: ${href}`);
   }
 }
