@@ -11,9 +11,9 @@ has no extension, hooks, CLI, public SDK export, or runtime dependencies.
 
 ## Status
 
-Version 0.1.0 is private and unpublished. There's no registry package and no
-public repository yet, so you install it from a tarball you build. The name
-`mobius-loop` is provisional.
+Version 0.1.0 is private and unpublished. Build a tarball from this repository
+to install it. Registry ownership and publication are not configured; the
+registry name `mobius-loop` is provisional.
 
 Tested so far:
 
@@ -31,8 +31,7 @@ Tested so far:
 The scripted provider verifies host integration; it does not establish
 autonomous model behavior or user impact. Registry installation, other agent
 hosts and an autonomous workflow remain untested.
-CI is configured for Ubuntu, macOS and Windows Server 2025;
-those remote jobs have not run.
+CI is configured for Ubuntu, macOS and Windows Server 2025.
 [docs/releasing.md](docs/releasing.md) lists the checks a release needs.
 
 ## Install in OmO Native

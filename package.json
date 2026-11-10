@@ -5,6 +5,10 @@
   "description": "A durable outcome navigation skill with a dependency-free Node engine",
   "type": "module",
   "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agno01/mobius-loop.git"
+  },
   "keywords": ["pi-package", "agent-skill", "mobius-loop"],
   "files": [
     "skills/mobius-loop/SKILL.md",

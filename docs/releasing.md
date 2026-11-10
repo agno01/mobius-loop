@@ -1,8 +1,8 @@
 # Releasing
 
-Nothing is published. The package is `private`, has no public repository, and
-no registry name has been claimed. Publishing needs separate decisions about
-ownership, the package name, the license, and the publishing identity.
+The package remains `private` and unpublished to a registry. Registry
+publication needs separate approval of ownership, package name, license
+metadata and publishing identity.
 
 ## Build a release candidate
 
@@ -58,8 +58,7 @@ routine release.
 
 These steps wait for the decisions above.
 
-- Settle the package name and owner, then add `repository` and the agreed
-  license metadata.
+- Confirm the registry package name, owner and license metadata.
 - Remove `private` only in the change that publishes.
 - Add a publish job that ships the verified candidate artifact rather than
   rebuilding it, using a credential owned by the package.
