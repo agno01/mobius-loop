@@ -17,18 +17,22 @@ public repository yet, so you install it from a tarball you build. The name
 
 Tested so far:
 
-- Tarball installation and the installed engine on macOS ARM64 with Node
-  24.22.2 (`engines.node` is `>=24.22.2`), including separate-process resume,
-  revision conflicts, evidence rules, unsafe storage and interrupted writes.
-- Skill discovery in Senpi 2026.11.5-1's resource loader.
-- OmO Native 5.1.65 installation, `/skill:mobius-loop` activation, record
-  mutation, session restart, a real delivery-goal reference and the memory
-  handoff, driven by a scripted provider through real host tools.
+- Tarball installation and the installed engine on macOS ARM64 and Windows
+  Server 2025 x64 with Node 24.22.2 (`engines.node` is `>=24.22.2`), including
+  separate-process resume, revision conflicts, evidence rules, unsafe storage
+  and interrupted writes.
+- Skill discovery, collision diagnostics and package filtering through Senpi's
+  resource loader: 2026.11.5-1 on macOS and 2026.11.6-3 on Windows.
+- OmO Native 5.1.65 on macOS and Windows Server 2025: installation,
+  `/skill:mobius-loop` activation, record mutation, session restart, a real
+  delivery-goal reference and the memory handoff, driven by a scripted provider
+  through real host tools. Local-path updates and removal preserve records.
 
 The scripted provider verifies host integration; it does not establish
-autonomous model behavior or user impact. Registry installation, Windows,
-other agent hosts and an autonomous workflow remain untested. CI is configured
-for Ubuntu and macOS; those remote jobs have not run.
+autonomous model behavior or user impact. Registry installation, other agent
+hosts and an autonomous workflow remain untested.
+CI is configured for Ubuntu, macOS and Windows Server 2025;
+those remote jobs have not run.
 [docs/releasing.md](docs/releasing.md) lists the checks a release needs.
 
 ## Install in OmO Native

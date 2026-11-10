@@ -15,11 +15,14 @@ Run the engine in a `js` `eval` cell. Its kernel keeps `mobius` bound across
 cells; `print` shows a result.
 
 ```js
-const { createMobius } = await import(`${skillRoot}/scripts/mobius.mjs`)
+const { join } = await import("node:path")
+const { pathToFileURL } = await import("node:url")
+const { createMobius } = await import(pathToFileURL(join(skillRoot, "scripts", "mobius.mjs")).href)
 const mobius = createMobius({ cwd: projectDirectory, slug: "install-diagnosis" })
 print(await mobius.status())
 ```
 
+The file URL handles Windows drive paths as well as POSIX paths.
 `projectDirectory` is the session's absolute project directory. After a kernel
 restart, `mobius` is undefined: import again with the same `skillRoot`,
 directory, and slug, then call `status()`.

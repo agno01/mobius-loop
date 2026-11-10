@@ -39,8 +39,13 @@ never against the working tree.
 5. With a same-name copy also present, the collision warning appears, the
    object entry with `"skills": []` disables this package, and the selected
    path is the expected one.
-6. Every platform and runtime the README claims has run step 3. Today that's
-   macOS ARM64 with Node 24.22.2 only.
+6. Every platform and runtime the README claims has run step 3. Engine and
+   artifact checks cover macOS ARM64 and Windows Server 2025 x64 with Node
+   24.22.2. The host journey in step 4 also covers both platforms with OmO
+   Native 5.1.65. Resource-loader checks use the matching Senpi engine:
+   2026.11.5-1 on macOS and 2026.11.6-3 on Windows. Retain startup and shutdown
+   warnings with the QA results; these runs don't certify the host's
+   background services or autonomous model behavior.
 
 ## Version
 
